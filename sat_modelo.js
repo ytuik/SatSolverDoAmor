@@ -1,4 +1,4 @@
-/**
+**
  * This file should be placed at the node_modules sub-directory of the directory where you're 
  * executing it.
  * 
@@ -13,23 +13,23 @@
 // Receives the current assignment and produces the next one
 function nextAssignment(currentAssignment) {
   // implement here the code to produce the next assignment based on currentAssignment. 
- result = []; 
+ newAssignment = []; 
    var Bin = currentAssignment.join('');
    var Dec = parseInt(Bin,2);
    NextAssi = Dec + 1;
    NextAssi = NextAssi.toString(2);
    if(NextAssi > Dec){
     for(let i = 0;i < currentAssignment.length - NextAssi.length;i++){
-      result[i] = 0;
+      newAssignment[i] = 0;
     }
    }
-result.push(NextAssi);
+newAssignment.push(NextAssi);
   return newAssignment  
 }
-
+/*
 function doSolve(clauses, assignment) {
   let isSat = false
-  while ((!isSat) && /* must check whether this is the last assignment or not*/) {
+  while ((!isSat) && // must check whether this is the last assignment or not) {
     // does this assignment satisfy the formula? If so, make isSat true. 
 
     // if not, get the next assignment and try again. 
@@ -41,7 +41,7 @@ function doSolve(clauses, assignment) {
   }
   return result
 }
-
+ */
 function readFormula(fileName) {
   let fs = require('fs');
   let Texto = fs.readFileSync('fileName','utf8');
@@ -63,6 +63,7 @@ function readFormula(fileName) {
   }
   return result
 }
+
 function checkProblemSpecification(text,clauses,variables){
  let text2 = text.filter(function(line) {
   return line[0] === 'p'
