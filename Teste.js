@@ -70,14 +70,42 @@ let text1 = Texto.split('\n');
    //NEXT ASSINGMENT
    result = []; 
    var Bin = aux.join('');
-   var Dec = parseInt(Bin,2);
+   var Dec = parseInt(Bin,2); 
    NextAssi = Dec + 1;
-   NextAssi = NextAssi.toString(2);
+   if (NextAssi <= math.pow(numVariables,2)){
+    NextAssi = NextAssi.toString(2);
    if(NextAssi > Dec){
     for(let i = 0;i < aux.length - NextAssi.length;i++){
-      result[i] = 0;
+      result[i] = 1;
     }
-   }
-result.push(NextAssi);
+  }
+}
    
-   console.log(result);
+  result.push(NextAssi);
+
+  console.log(result);
+
+
+   //DoSolver
+   let isSat = false
+   let ToF  = [];
+   for (let i = 0;i < result.length;i++){
+    if(result[i] == 0 ){
+      ToF[i] = false;
+    }else {
+      ToF[i] = true;
+    }
+  } 
+
+  console.log(ToF)
+  while (!isSat) {
+
+    for(let i = 0; i < text.length;i++){
+      for(let j = 0;j < text[i].length;j++){
+        if (text[i][j] < 0){
+          Tof[j] = !Tof[j];
+        }
+
+      }
+    }
+  } 
