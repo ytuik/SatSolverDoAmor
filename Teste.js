@@ -72,40 +72,55 @@ let text1 = Texto.split('\n');
    var Bin = aux.join('');
    var Dec = parseInt(Bin,2); 
    NextAssi = Dec + 1;
-   if (NextAssi <= math.pow(numVariables,2)){
+   if (NextAssi <= Math.pow(numVariables,2)){
     NextAssi = NextAssi.toString(2);
+    q = parseInt(NextAssi)
    if(NextAssi > Dec){
     for(let i = 0;i < aux.length - NextAssi.length;i++){
-      result[i] = 1;
+      result[i] = 0;
     }
   }
 }
    
-  result.push(NextAssi);
+  result.push(q);
 
   console.log(result);
 
 
    //DoSolver
    let isSat = false
-   let ToF  = [];
+   var ToF  = []
    for (let i = 0;i < result.length;i++){
     if(result[i] == 0 ){
-      ToF[i] = false;
+     ToF[i] = false;
     }else {
-      ToF[i] = true;
+      ToF [i] = true;
     }
   } 
 
   console.log(ToF)
-  while (!isSat) {
-
+  console.log('vrau')
+//  while (!isSat) {
+var Fon = []
     for(let i = 0; i < text.length;i++){
       for(let j = 0;j < text[i].length;j++){
         if (text[i][j] < 0){
-          Tof[j] = !Tof[j];
+          Fon [i] [j] = !ToF [j];
+        }else{
+          Fon [i] [j] = ToF [j];
         }
-
+      } // converte uma formula de variaveis desconhecidas em uma formula de true e false
+    }
+    console.log(NovaVariavel)
+      console.log('vrau')
+    NovaVariavel2 = [];
+    for (let i = 0; i < ToF.length;i++){
+        NovaVariavel2[i] = false;
+      for (let j = 0;j <ToF[i].length;j++){ 
+        if (ToF [i][j] == true){
+          NovaVariavel2[i] = true;
+        } 
       }
     }
-  } 
+    console.log(NovaVariavel)
+ // } 
