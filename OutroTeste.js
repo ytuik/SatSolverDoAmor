@@ -1,5 +1,5 @@
 let fs = require('fs');
-  let Texto = fs.readFileSync('simple2.cnf','utf8');
+  let Texto = fs.readFileSync('simple1.cnf','utf8');
   // To read the file, it is possible to use the 'fs' module. 
   // Use function readFileSync and not readFile. 
   // First read the lines of text of the file and only afterward use the auxiliary functions.
@@ -19,7 +19,7 @@ function checkProblemSpecification(text,clauses,variables){
    numClauses = arrayAux[1]; //Um bocado de metodo para conseguir pegar os numeros
    a = false;
    b = true;
-   if (aux.length == numVariables){
+   if (variables.length == numVariables){
     a = true;
    } //verificação do numero de variaveis
    for (let i = 0;i<textf.length - 2;i++){
@@ -69,10 +69,8 @@ function readVariables(clauses){
     return aux;
   }
 
-  a = readVariables(variables)
  
   console.log(clauses);
   console.log('vrau')
   console.log(variables)
   console.log('vrau')
-   console.log(a);
