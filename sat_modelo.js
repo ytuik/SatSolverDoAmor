@@ -1,5 +1,5 @@
-**
- * This file should be placed at the node_modules sub-directory of the directory where you're 
+
+ /* This file should be placed at the node_modules sub-directory of the directory where you're 
  * executing it.
  * 
  * Written by Fernando Castor in November/2017. 
@@ -75,7 +75,7 @@ function checkProblemSpecification(text,clauses,variables){
    numClauses = arrayAux[1]; //Um bocado de metodo para conseguir pegar os numeros
    a = false;
    b = true;
-   if (aux.length == numVariables){
+   if (arrayAux.length == numVariables){
     a = true;
    } //verificação do numero de variaveis
    for (let i = 0;i<textf.length - 2;i++){

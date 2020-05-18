@@ -1,4 +1,4 @@
-let fs = require('fs');
+  let fs = require('fs');
   let Texto = fs.readFileSync('simple1.cnf','utf8');
   // To read the file, it is possible to use the 'fs' module. 
   // Use function readFileSync and not readFile. 

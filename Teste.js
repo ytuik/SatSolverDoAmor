@@ -33,7 +33,7 @@ let text1 = Texto.split('\n');
     }//transforma os objetos do array auxiliar em 0
     console.log(text);
     console.log(aux);
-    console.log(textf);
+    console.log(text);
 
   //Check
   let text2 = text1.filter(function(line) {
@@ -51,8 +51,8 @@ let text1 = Texto.split('\n');
   if (aux.length == numVariables){
     a = true;
    } //verificação do numero de variaveis
-   for (let i = 0;i<textf.length - 2;i++){
-    if (textf[i].indexOf('0') === -1){
+   for (let i = 0;i<text.length - 2;i++){
+    if (text[i].indexOf('0') === -1){
       b = false;
     }
   }
@@ -85,7 +85,6 @@ let text1 = Texto.split('\n');
   result.push(q);
 
   console.log(result);
-
 
    //DoSolver
    let isSat = false
